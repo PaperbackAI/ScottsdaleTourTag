@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scottsdale Tourism App</title>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+</head>
+<body>
+    <h1>Welcome to Scottsdale Tourism App</h1>
+    
+    <h2>Tourist Spots</h2>
+    <button hx-get="/map-data" hx-trigger="click" hx-target="#map-data">Load Map Data</button>
+    <div id="map-data"></div>
+
+    <h2>Food Finder</h2>
+    <button hx-get="/food-finder" hx-trigger="click" hx-target="#food-data">Find Food</button>
+    <div id="food-data"></div>
+
+    <h2>Home Listings</h2>
+    <button hx-get="/listings" hx-trigger="click" hx-target="#listings">View Listings</button>
+    <button hx-post="/update-listings" hx-trigger="click" hx-target="#update-message">Update Listings</button>
+    <div id="listings"></div>
+    <div id="update-message"></div>
+</body>
+</html>
